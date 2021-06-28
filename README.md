@@ -6,14 +6,13 @@
 
 ## Description
 
-This is an application that allows users to write and save notes, which assists users with keeping track of thoughts or tasks. It uses Express.js on the backend to store and display the data.
+This is an application that allows users to write and save notes. It was created with the goal of assisting users with an easy way of keeping track of important thoughts or tasks. It uses Express.js on the backend to store and display the data.
     
 ## Table of Contents
  - [Installation](#installation)
  - [Usage](#usage)
  - [License](#license)
- - [Contributing](#contributing)
- - [Tests](#tests)
+ - [Credits](#credits)
  - [Questions](#questions)
     
     
