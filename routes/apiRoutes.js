@@ -1,6 +1,9 @@
 // IMPORT FILESYSTEM
 const fs = require('fs');
 
+// IMPORT UUID FOR ID'S
+const { v4: uuidv4 } = require('uuid');
+
 // DATA
 let notesData = {};
 
@@ -22,6 +25,7 @@ module.exports = (app) => {
 
     // API POST Requests
     app.post('/api/notes', (req, res) => {
+        req.body.id = uuidv4();
         notesData.push(req.body);
 
         fs.writeFile(`${__dirname}/../db/db.json`, JSON.stringify(notesData), (err) => {
@@ -32,6 +36,19 @@ module.exports = (app) => {
             }
         })
         res.json(req.body);
+    });
+
+    // API DELETE Requests
+    app.delete('/api/notes/:id', (req, res) => {
+        const idPassed = req.params.id;
+        const indexOf = notesData.findIndex(p => p.id==idPassed);
+        notesData.splice(indexOf, 1);
+        fs.writeFile(`${__dirname}/../db/db.json`, JSON.stringify(notesData),  (err) => {
+            if (err) {
+                console.log(err)
+            }
+        })
+        res.json(notesData);
     });
 
 };
