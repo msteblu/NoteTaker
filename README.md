@@ -28,7 +28,7 @@ If you use the application through the deployed [Heroku site](https://fast-citad
 
 If the program was cloned and downloaded, get the application running by typing "node server.js" into the command-line. All features of the application are then accessible through *localhost* on your browser or other applications.
 
-*As the application prompts the user with questions, type in the answers and hit Enter.*
+*View saved notes on the left, write new notes on the right, and save or start a new note by clicking the buttons in the upper-right-hand corner.*
 ![Screenshot of Application](asset/app.png)
 
 ## License
